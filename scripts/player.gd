@@ -2,17 +2,16 @@ extends AnimatedSprite2D
 
 var speed = 200.0
 
-func adjust_animation(direction : Vector2):
-	animation = "idle"
-	flip_h = false
-	
-	if abs(direction.x) > 0 or abs(direction.y) > 0:
-		animation = "walk"
-	
-	if direction.x > 0:
-		pass
+func adjust_animation(direction: Vector2):
+	if direction == Vector2.ZERO:
+		animation = "idle"
 	else:
-		flip_h = true
+		animation = "walk"
+		
+		if direction.x > 0:
+			flip_h = false
+		elif direction.x < 0:
+			flip_h = true
 	
 	play()
 
