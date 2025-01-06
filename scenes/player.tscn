@@ -1,0 +1,107 @@
+[gd_scene load_steps=16 format=3 uid="uid://da1db1cd3jopd"]
+
+[ext_resource type="Texture2D" uid="uid://dc17gm0ceegs0" path="res://Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_nw47k"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="2_cotxq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v34td"]
+atlas = ExtResource("1_nw47k")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkc8e"]
+atlas = ExtResource("1_nw47k")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fxlt"]
+atlas = ExtResource("1_nw47k")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlr48"]
+atlas = ExtResource("1_nw47k")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ktus"]
+atlas = ExtResource("1_nw47k")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drv1i"]
+atlas = ExtResource("1_nw47k")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3tb4"]
+atlas = ExtResource("1_nw47k")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wyle"]
+atlas = ExtResource("1_nw47k")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gnxu"]
+atlas = ExtResource("1_nw47k")
+region = Rect2(384, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1573i"]
+atlas = ExtResource("1_nw47k")
+region = Rect2(576, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7cgdn"]
+atlas = ExtResource("1_nw47k")
+region = Rect2(768, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7xrr"]
+atlas = ExtResource("1_nw47k")
+region = Rect2(960, 192, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v60mw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v34td")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkc8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fxlt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlr48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ktus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drv1i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3tb4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wyle")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gnxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1573i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7cgdn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7xrr")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[node name="Player" type="AnimatedSprite2D"]
+position = Vector2(218, 131)
+sprite_frames = SubResource("SpriteFrames_v60mw")
+animation = &"idle"
+script = ExtResource("2_cotxq")
