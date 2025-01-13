@@ -1,2 +1,2 @@
 # My First Game (Untitled)
-This is a small project to help me learn to make games.
+This is a small project for me to start learning making simple game.
